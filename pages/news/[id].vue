@@ -3,6 +3,7 @@
   <div v-if="data">
     <h1>{{ data.title }}</h1>
     <p>{{ data.content }}</p>
+    <p>{{ data.description }}</p>
   </div>
   <div v-else>
     <p>Loading or not found...</p>
@@ -18,3 +19,7 @@ if (error.value) {
   console.error(error.value);
 }
 </script>
+
+<style>
+
+</style>

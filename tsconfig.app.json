@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["@nuxt/types", "@nuxtjs/tailwindcss"]
+  },
+  "include": ["nuxt.config.ts", "**/*.ts", "**/*.vue"]
+}

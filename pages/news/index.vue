@@ -1,5 +1,5 @@
 <template>
-  <div class="news-grid">
+  <div class="news-list">
     <NewsCard v-for="item in news" :key="item.id" :news="item" />
   </div>
 </template>
@@ -10,11 +10,11 @@ const { data: news } = await useFetch('/api/news')
 </script>
 
 <style scoped>
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  background: #fdfdfd;
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 7rem 2rem 3rem;
+  background: #f3f4f6;
 }
 </style>

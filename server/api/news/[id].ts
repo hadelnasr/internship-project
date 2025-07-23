@@ -1,19 +1,22 @@
-// server/api/news/[id].ts
-export default defineEventHandler(async (event) => {
-    const { id } = event.context.params as { id: string };
+import { newsItems } from '~/server/data/news'
 
-    // Mock data (replace with DB call or fetch from external API)
-    const newsItems = [
-        { id: '1', title: 'News One', content: 'Content of News One', description: "This is the news 1 description" },
-        { id: '2', title: 'News Two', content: 'Content of News Two' , description: "This is the news 2 description" },
-        { id: '3', title: 'News Three', content: 'Content of News Three' , description: "This is the news 3 description" },
-    ];
+export default defineEventHandler((event) => {
+  const { id } = event.context.params as { id: string }
 
-    const newsItem = newsItems.find(item => item.id === id);
+  const item = newsItems.find(news => news.id === id)
 
-    if (!newsItem) {
-        throw createError({ statusCode: 404, statusMessage: 'News not found' });
-    }
+  if (!item) {
+    throw createError({ statusCode: 404, statusMessage: 'News not found' })
+  }
 
-    return newsItem;
-});
+  return {
+    id: item.id,
+    title: item.title,
+    description: item.description,
+    content: item.content,
+    created_by_name: item.created_by_name,
+    created_at: item.created_at,
+    updated_at: item.updated_at,
+    image_url: item.image_url, 
+  }
+})

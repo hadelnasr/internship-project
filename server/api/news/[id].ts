@@ -1,4 +1,7 @@
-import { newsItems } from '~/server/data/news'
+import { newsItems } from '../../data/news';
+import { defineEventHandler } from 'h3';
+import { createError } from 'h3';
+
 
 export default defineEventHandler((event) => {
   const { id } = event.context.params as { id: string }

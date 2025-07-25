@@ -3,6 +3,9 @@
     <nav class="navbar">
       <NuxtLink to="/" class="nav-link">Home</NuxtLink>
       <NuxtLink to="/news" class="nav-link">News</NuxtLink>
+      <NuxtLink to="/news/search" class="px-3 py-1 rounded text-white bg-blue-600 hover:bg-blue-700">
+       Discover
+     </NuxtLink>
     </nav>
     <NuxtPage />
   </div>

@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from '     '
+import { ref, watch } from 'vue'
 import { Search, User, RefreshCcw } from 'lucide-vue-next'
 
 const emit = defineEmits(['update:search', 'update:author'])

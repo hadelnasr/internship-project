@@ -43,7 +43,7 @@
 </template>
 
 <script setup>
-import { ref } from '             '
+import { ref } from 'vue'
 import NewsSearchFilter from '@/components/NewsSearchFilter.vue'
 
 const search = ref('')

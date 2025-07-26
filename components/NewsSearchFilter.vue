@@ -2,12 +2,8 @@
   <div class="flex flex-col md:flex-row md:items-center gap-4 justify-center mb-6 flex-wrap">
     <div class="relative w-full md:w-[40%]">
       <Search class="absolute left-3 top-3.5 w-5 h-5 text-gray-400" />
-      <input
-        v-model="searchQuery"
-        type="text"
-        placeholder="Search news by title or keyword..."
-        class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-      />
+      <input v-model="searchQuery" type="text" placeholder="Search news by title or keyword..."
+        class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition" />
     </div>
 
     <div class="relative w-full md:w-[40%]">
